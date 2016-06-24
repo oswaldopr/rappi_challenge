@@ -10,7 +10,8 @@
 define("APP_NAME", "Cube Summation");
 
 //Project of application
-define("APP_PROJECT", "RappiChallenge");
+define("APP_PROJECT", "Rappi Challenge");
+
 
 /*** APP DIRECTORIES ***/
 //Libraries directory
@@ -19,11 +20,6 @@ define("DIR_LIBS", "libs" . DIRECTORY_SEPARATOR);
 //Smarty directory
 define("DIR_SMARTY", DIR_LIBS . "smarty_2_6_28" . DIRECTORY_SEPARATOR . "libs" . DIRECTORY_SEPARATOR);
 
-//Server libraries directory
-define("DIR_LIBS_SERVER", DIR_LIBS . "server" . DIRECTORY_SEPARATOR);
-
-//Client libraries directory
-define("DIR_LIBS_CLIENT", DIR_LIBS . "client" . DIRECTORY_SEPARATOR);
 
 /*** SMARTY TEMPLATES DIRECTORIES ***/
 //Smarty templates
@@ -40,6 +36,27 @@ define("SMARTY_CONFIGS", SMARTY_COMPILATIONS . "configs" . DIRECTORY_SEPARATOR);
 
 //Smarty cache
 define("SMARTY_CACHE", SMARTY_COMPILATIONS . "cache" . DIRECTORY_SEPARATOR);
+
+
+/*** APP EXTENSIONS ***/
+//Controllers
+define("CONTROL_EXTENSION", ".control.php");
+
+//Models
+define("MODEL_EXTENSION", ".model.php");
+
+//Templates
+define("TEMPLATE_EXTENSION", ".template.tpl");
+
+//CSS scripts
+define("CSS_EXTENSION", ".style.css");
+
+//JS scripts
+define("JS_EXTENSION", ".script.js");
+
+//Classes
+define("CLASS_EXTENSION", ".class.php");
+
 
 /*** CONSTRAINTS FOR EXECUTION ***/
 //Maximum number of test-cases
