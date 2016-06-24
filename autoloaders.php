@@ -18,7 +18,7 @@ function autoload_app_class($class) {
  * @return  void
  */
 function autoload_app_model($model) {
-    autoload("models", strtolower($model));
+    autoload("models", strtolower($model), true);
 }
 
 /**
@@ -32,16 +32,16 @@ function autoload_smarty_class() {
 }
 
 /**
- * Function to autoload classes/interfaces; not register with spl_autoload_register()
+ * Function to autoload classes; not register with spl_autoload_register()
  * 
  * @author  Oswaldo Peña <oswaldopr@gmail.com>
- * @param   string  $dir        Directory to search the class/interface file to require
- * @param   string  $class      Name of class/interface to require
- * @param   boolean $interface  The class is an interface (true)
+ * @param   string  $dir    Directory to search the class file to require
+ * @param   string  $class  Name of class to require
+ * @param   boolean $model  $class is a model class (true)
  * @return  void
  */
-function autoload($dir, $class, $interface = false) {
-    $type = !$interface ? ".class.php" : ".iclass.php";
+function autoload($dir, $class, $model = false) {
+    $type = !$model ? CLASS_EXTENSION : MODEL_EXTENSION;
     $file = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $class . $type;
     if(file_exists($file))
         require_once $file;
