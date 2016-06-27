@@ -49,7 +49,7 @@ class Template extends Smarty {
         $file = Utilities::getPath("css", $this->_template . CSS_EXTENSION);
         if($file != "") {
             $script = '<link type="text/css" rel="stylesheet" href="' . $file . '" />';
-            $this->assign("scriptCSS", $script);
+            $this->assign("templateCSS", $script);
         }
     }
 
@@ -62,14 +62,14 @@ class Template extends Smarty {
         $file = Utilities::getPath("js", $this->_template . JS_EXTENSION);
         if($file != "") {
             $script = '<script type="text/javascript" src="' . $file . '"></script>';
-            $this->assign("scriptJS", $script);
+            $this->assign("templateJS", $script);
         }
     }
 
     /**
      * Includes the name of controller
      * 
-     * @return void
+     * @return  void
      */
     private function includeControllerFileName() {
         $controller = '<input type="hidden" id="hfController" value="' . basename($_SERVER["PHP_SELF"]) . '" />';

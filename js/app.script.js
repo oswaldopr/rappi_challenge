@@ -1,3 +1,6 @@
+/*
+ * App JS script
+ */
 function getController() {
     return $F("hfController");
 }

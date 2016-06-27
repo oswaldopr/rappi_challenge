@@ -2,14 +2,16 @@
 <head>
     <meta http-equiv="content-type" content="text/html" />
     {load_css sheet="app"}
-    {$scriptCSS}
-    {$scriptJS}
+    {$templateCSS}
+    {$templateJS}
     <title>{$appName} :: {$appProject}</title>
 </head>
 
 <body>
-    <h1>{$appName}</h1>
-    <h2>{$appProject}</h2>
+    <div class="titles">
+        <h1>{$appName}</h1>
+        <h2>{$appProject}</h2>
+    </div>
     <iframe id="ifrController" src="{$require}"></iframe>
 </body>
 </html>
